@@ -1,0 +1,37 @@
+import { Divider, Drawer, makeStyles } from '@mui/material'
+import React from 'react'
+import Listas from './Listas'
+
+const estilos = makeStyles(theme => ({
+    drawer: {
+        width: 240,
+        flexShrink: 0,
+      },
+      drawerPaper: {
+        width: 240,
+      },
+      toolbar: theme.mixins.toolbar,
+}))
+
+const Cajon = () => {
+    const classes = estilos()
+
+  return (
+    <Drawer
+        className= {classes.drawer} 
+        variant='permanent'
+        classes={{
+            paper: classes.drawerPaper,
+          }}
+        anchor="right"
+    >
+        {/* se va a generar el espaciado */}
+        <div className={classes.toolbar}></div>
+        {/* divider solo coloca una linea */}
+        <Divider />
+        <Listas />
+    </Drawer>
+  )
+}
+
+export default Cajon

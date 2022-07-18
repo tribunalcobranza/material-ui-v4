@@ -1,0 +1,27 @@
+import React from 'react';
+import Button from '@mui/material/Button'
+import { ThemeProvider } from '@mui/material/styles';
+
+import theme from './temaConfig';
+import NavBar from './components/NavBar';
+import { Typography } from '@mui/material';
+ 
+function App() {
+  
+  return (
+    <ThemeProvider theme={theme}>
+      <NavBar />
+      <Button variant='contained' color='primary'>
+        boton
+      </Button>
+      <Button variant='contained' color='secondary'>
+        boton
+      </Button>
+      <Typography variant='h1' color="initial">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. In nulla iusto ipsum adipisci cum excepturi consequatur accusamus nam consequuntur? Minus a id nostrum ipsa consequuntur autem placeat incidunt consectetur optio?
+      </Typography>
+    </ThemeProvider>
+  );
+}
+
+export default App;

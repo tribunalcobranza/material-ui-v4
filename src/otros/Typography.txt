@@ -1,0 +1,22 @@
+import React from 'react';
+import Typography from '@mui/material/Typography'
+
+
+ 
+function App() {
+  return (
+    <div>
+     <Typography variant="h1" color="primary">
+      sfdffgd
+     </Typography>
+     <Typography variant="body1" color="secondary" align='center' paragraph>
+        lorem
+     </Typography>
+     <Typography variant="body1" color="primary" align='center'>
+        lorem
+     </Typography>
+    </div>
+  );
+}
+
+export default App;

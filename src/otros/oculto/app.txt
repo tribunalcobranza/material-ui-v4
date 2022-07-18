@@ -1,0 +1,29 @@
+import React from 'react';
+import Button from '@mui/material/Button'
+import { ThemeProvider } from '@mui/material/styles';
+
+import theme from './temaConfig';
+import NavBar from './components/NavBar';
+import Listas from './components/Listas';
+
+import Oculto from './components/Oculto';
+ 
+function App() {
+  
+  return (
+    <ThemeProvider theme={theme}>
+      <NavBar />
+      <Button variant='contained' color='primary'>
+        boton
+      </Button>
+      <Button variant='contained' color='secondary'>
+        boton
+      </Button>
+      <Listas />
+
+      <Oculto />
+    </ThemeProvider>
+  );
+}
+
+export default App;

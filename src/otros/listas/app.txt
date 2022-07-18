@@ -1,0 +1,26 @@
+import React from 'react';
+import Button from '@mui/material/Button'
+import { ThemeProvider } from '@mui/material/styles';
+
+import theme from './temaConfig';
+import NavBar from './components/NavBar';
+import Listas from './components/Listas';
+
+ 
+function App() {
+  
+  return (
+    <ThemeProvider theme={theme}>
+      <NavBar />
+      <Button variant='contained' color='primary'>
+        boton
+      </Button>
+      <Button variant='contained' color='secondary'>
+        boton
+      </Button>
+      <Listas />
+    </ThemeProvider>
+  );
+}
+
+export default App;

@@ -1,0 +1,37 @@
+import { makeStyles } from '@mui/material'
+import React from 'react'
+import Cajon from './Cajon'
+import NavBar from './NavBar'
+
+
+const estilos = makeStyles(theme => ({
+    root:{
+        display: 'flex'
+    },
+    toolbar: theme.mixins.toolbar,
+    content: {
+        flexGrow: 1,
+        backgroundColor: theme.palette.background.default,
+        padding: theme.spacing(3),
+      },
+
+}))
+
+const Contenedor = () => {
+    const classes = estilos()
+
+  return (
+    <div className={classes.root}>
+        <NavBar />
+        <Cajon />
+        Contenedor
+        <div>
+            <div className={classes.content}></div>
+            <div className={classes.toolbar}> </div>
+            contenido
+        </div>
+    </div>
+  )
+}
+
+export default Contenedor
